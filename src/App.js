@@ -1,9 +1,10 @@
 import React from 'react'
-
+import { getTokenFromUrl } from './Networks/spotify'
 function App() {
   return (
     <div >
-      Spotify Hello
+      {getTokenFromUrl()}
+     Redirecting....
     </div>
   );
 }

@@ -1,11 +1,11 @@
 import React from 'react';
 import './Auth.css';
-import { loginURL } from './spotifyLoginApi'
+import { spotifyService } from '../../Networks/spotify'
 export default function Login() {
     return (
 
         <div className='login'>
-            {console.log(process.env)}
+
             {/* Spotify Logo */}
             <img
                 className='spotifyLogo'
@@ -14,7 +14,7 @@ export default function Login() {
                 }
                 alt='spotify logo' />
             <a
-                href={loginURL}
+                href={spotifyService.loginURL}
             >Login with Spotify</a>
         </div>
 
