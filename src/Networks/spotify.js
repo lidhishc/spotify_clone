@@ -23,7 +23,6 @@ export const getTokenFromUrl = () => {
         }
     );
     window.location.hash = ""
-
     if (localStorage.getItem('access_token')) {
         window.location.replace('/home')
     } else (window.location.replace('/login'))
