@@ -1,12 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { connect } from 'react-redux'
 import { getTokenFromUrl } from './Networks/spotify'
+
 function App() {
+  useEffect(() => {
+    getTokenFromUrl()
+
+  }, [])
   return (
     <div >
-      {getTokenFromUrl()}
-     Redirecting....
+
+      Redirecting....
     </div>
   );
 }
 
-export default App;
+export default connect()(App);

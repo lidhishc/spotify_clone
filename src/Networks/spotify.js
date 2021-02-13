@@ -1,5 +1,5 @@
 import spotify from 'spotify-web-api-js'
-
+import { toastFuncions } from '../Components/others/common/toast';
 const authSpotifyUrl = `https://accounts.spotify.com/authorize`
 
 const scopes = [
@@ -24,7 +24,11 @@ export const getTokenFromUrl = () => {
     );
     window.location.hash = ""
     if (localStorage.getItem('access_token')) {
-        window.location.replace('/home')
+        toastFuncions.success("Loged in");
+        setTimeout(() => {
+            window.location.replace('/home');
+        }, 1000);
+
     } else (window.location.replace('/login'))
 }
 

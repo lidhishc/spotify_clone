@@ -6,6 +6,7 @@ import Login from './../Components/Auth/Login'
 
 //Pages
 import Home from '../Components/Home/Home'
+import PageNotFound from '../Components/others/Pages/PageNotFound/PageNotFound'
 const routes = () => (
 
     <Switch>
@@ -21,7 +22,7 @@ const routes = () => (
 
 
 
-        <Route path='' render={() => (<div>No Page</div>)} />
+        <Route path='' component={PageNotFound} />
     </Switch>
 
 

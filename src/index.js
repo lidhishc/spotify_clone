@@ -5,12 +5,18 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css'
 import Routes from './Routes/Routes'
 import { BrowserRouter } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import configureStore from './Redux/store';
+
+
 ReactDOM.render(
-  <BrowserRouter>
-    <React.StrictMode>
-      <Routes />
-    </React.StrictMode>
-  </BrowserRouter>,
+  <Provider store={configureStore()}>
+    <BrowserRouter>
+      <React.StrictMode>
+        <Routes />
+      </React.StrictMode>
+    </BrowserRouter>
+  </Provider>,
   document.getElementById('root')
 );
 
